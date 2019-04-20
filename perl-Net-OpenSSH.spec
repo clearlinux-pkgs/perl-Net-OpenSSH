@@ -69,20 +69,20 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.1/Net/OpenSSH.pm
-/usr/lib/perl5/vendor_perl/5.28.1/Net/OpenSSH/ConnectionCache.pm
-/usr/lib/perl5/vendor_perl/5.28.1/Net/OpenSSH/Constants.pm
-/usr/lib/perl5/vendor_perl/5.28.1/Net/OpenSSH/ModuleLoader.pm
-/usr/lib/perl5/vendor_perl/5.28.1/Net/OpenSSH/OSTracer.pm
-/usr/lib/perl5/vendor_perl/5.28.1/Net/OpenSSH/ObjectRemote.pm
-/usr/lib/perl5/vendor_perl/5.28.1/Net/OpenSSH/SSH.pm
-/usr/lib/perl5/vendor_perl/5.28.1/Net/OpenSSH/ShellQuoter.pm
-/usr/lib/perl5/vendor_perl/5.28.1/Net/OpenSSH/ShellQuoter/Chain.pm
-/usr/lib/perl5/vendor_perl/5.28.1/Net/OpenSSH/ShellQuoter/MSCmd.pm
-/usr/lib/perl5/vendor_perl/5.28.1/Net/OpenSSH/ShellQuoter/MSWin.pm
-/usr/lib/perl5/vendor_perl/5.28.1/Net/OpenSSH/ShellQuoter/POSIX.pm
-/usr/lib/perl5/vendor_perl/5.28.1/Net/OpenSSH/ShellQuoter/csh.pm
-/usr/lib/perl5/vendor_perl/5.28.1/Net/OpenSSH/ShellQuoter/fish.pm
+/usr/lib/perl5/vendor_perl/5.28.2/Net/OpenSSH.pm
+/usr/lib/perl5/vendor_perl/5.28.2/Net/OpenSSH/ConnectionCache.pm
+/usr/lib/perl5/vendor_perl/5.28.2/Net/OpenSSH/Constants.pm
+/usr/lib/perl5/vendor_perl/5.28.2/Net/OpenSSH/ModuleLoader.pm
+/usr/lib/perl5/vendor_perl/5.28.2/Net/OpenSSH/OSTracer.pm
+/usr/lib/perl5/vendor_perl/5.28.2/Net/OpenSSH/ObjectRemote.pm
+/usr/lib/perl5/vendor_perl/5.28.2/Net/OpenSSH/SSH.pm
+/usr/lib/perl5/vendor_perl/5.28.2/Net/OpenSSH/ShellQuoter.pm
+/usr/lib/perl5/vendor_perl/5.28.2/Net/OpenSSH/ShellQuoter/Chain.pm
+/usr/lib/perl5/vendor_perl/5.28.2/Net/OpenSSH/ShellQuoter/MSCmd.pm
+/usr/lib/perl5/vendor_perl/5.28.2/Net/OpenSSH/ShellQuoter/MSWin.pm
+/usr/lib/perl5/vendor_perl/5.28.2/Net/OpenSSH/ShellQuoter/POSIX.pm
+/usr/lib/perl5/vendor_perl/5.28.2/Net/OpenSSH/ShellQuoter/csh.pm
+/usr/lib/perl5/vendor_perl/5.28.2/Net/OpenSSH/ShellQuoter/fish.pm
 
 %files dev
 %defattr(-,root,root,-)
