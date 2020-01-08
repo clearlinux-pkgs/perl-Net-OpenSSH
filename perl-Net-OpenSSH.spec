@@ -4,13 +4,14 @@
 #
 Name     : perl-Net-OpenSSH
 Version  : 0.78
-Release  : 10
+Release  : 11
 URL      : https://cpan.metacpan.org/authors/id/S/SA/SALVA/Net-OpenSSH-0.78.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/S/SA/SALVA/Net-OpenSSH-0.78.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libn/libnet-openssh-perl/libnet-openssh-perl_0.78-1.debian.tar.xz
 Summary  : 'Perl SSH client package implemented on top of OpenSSH'
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
+Requires: perl-Net-OpenSSH-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
 
 %description
@@ -23,23 +24,34 @@ INSTALLATION
 Summary: dev components for the perl-Net-OpenSSH package.
 Group: Development
 Provides: perl-Net-OpenSSH-devel = %{version}-%{release}
+Requires: perl-Net-OpenSSH = %{version}-%{release}
 
 %description dev
 dev components for the perl-Net-OpenSSH package.
 
 
+%package perl
+Summary: perl components for the perl-Net-OpenSSH package.
+Group: Default
+Requires: perl-Net-OpenSSH = %{version}-%{release}
+
+%description perl
+perl components for the perl-Net-OpenSSH package.
+
+
 %prep
 %setup -q -n Net-OpenSSH-0.78
-cd ..
-%setup -q -T -D -n Net-OpenSSH-0.78 -b 1
+cd %{_builddir}
+tar xf %{_sourcedir}/libnet-openssh-perl_0.78-1.debian.tar.xz
+cd %{_builddir}/Net-OpenSSH-0.78
 mkdir -p deblicense/
-mv %{_topdir}/BUILD/debian/* %{_topdir}/BUILD/Net-OpenSSH-0.78/deblicense/
+cp -r %{_builddir}/debian/* %{_builddir}/Net-OpenSSH-0.78/deblicense/
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
+export LANG=C.UTF-8
 if test -f Makefile.PL; then
 %{__perl} Makefile.PL
 make  %{?_smp_mflags}
@@ -49,7 +61,7 @@ else
 fi
 
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
@@ -69,20 +81,6 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.2/Net/OpenSSH.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Net/OpenSSH/ConnectionCache.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Net/OpenSSH/Constants.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Net/OpenSSH/ModuleLoader.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Net/OpenSSH/OSTracer.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Net/OpenSSH/ObjectRemote.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Net/OpenSSH/SSH.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Net/OpenSSH/ShellQuoter.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Net/OpenSSH/ShellQuoter/Chain.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Net/OpenSSH/ShellQuoter/MSCmd.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Net/OpenSSH/ShellQuoter/MSWin.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Net/OpenSSH/ShellQuoter/POSIX.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Net/OpenSSH/ShellQuoter/csh.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Net/OpenSSH/ShellQuoter/fish.pm
 
 %files dev
 %defattr(-,root,root,-)
@@ -93,3 +91,20 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 /usr/share/man/man3/Net::OpenSSH::SSH.3
 /usr/share/man/man3/Net::OpenSSH::ShellQuoter::MSCmd.3
 /usr/share/man/man3/Net::OpenSSH::ShellQuoter::MSWin.3
+
+%files perl
+%defattr(-,root,root,-)
+/usr/lib/perl5/vendor_perl/5.30.1/Net/OpenSSH.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Net/OpenSSH/ConnectionCache.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Net/OpenSSH/Constants.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Net/OpenSSH/ModuleLoader.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Net/OpenSSH/OSTracer.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Net/OpenSSH/ObjectRemote.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Net/OpenSSH/SSH.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Net/OpenSSH/ShellQuoter.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Net/OpenSSH/ShellQuoter/Chain.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Net/OpenSSH/ShellQuoter/MSCmd.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Net/OpenSSH/ShellQuoter/MSWin.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Net/OpenSSH/ShellQuoter/POSIX.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Net/OpenSSH/ShellQuoter/csh.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Net/OpenSSH/ShellQuoter/fish.pm
