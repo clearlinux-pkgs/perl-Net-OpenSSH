@@ -4,14 +4,16 @@
 #
 Name     : perl-Net-OpenSSH
 Version  : 0.78
-Release  : 11
+Release  : 12
 URL      : https://cpan.metacpan.org/authors/id/S/SA/SALVA/Net-OpenSSH-0.78.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/S/SA/SALVA/Net-OpenSSH-0.78.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libn/libnet-openssh-perl/libnet-openssh-perl_0.78-1.debian.tar.xz
 Summary  : 'Perl SSH client package implemented on top of OpenSSH'
 Group    : Development/Tools
-License  : Artistic-1.0-Perl
+License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
+Requires: perl-Net-OpenSSH-license = %{version}-%{release}
 Requires: perl-Net-OpenSSH-perl = %{version}-%{release}
+Requires: perl(Object::Remote::Role::Connector::PerlInterpreter)
 BuildRequires : buildreq-cpan
 
 %description
@@ -28,6 +30,14 @@ Requires: perl-Net-OpenSSH = %{version}-%{release}
 
 %description dev
 dev components for the perl-Net-OpenSSH package.
+
+
+%package license
+Summary: license components for the perl-Net-OpenSSH package.
+Group: Default
+
+%description license
+license components for the perl-Net-OpenSSH package.
 
 
 %package perl
@@ -69,6 +79,8 @@ make TEST_VERBOSE=1 test
 
 %install
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/package-licenses/perl-Net-OpenSSH
+cp %{_builddir}/debian/copyright %{buildroot}/usr/share/package-licenses/perl-Net-OpenSSH/358e44dddf4d5eb61f97778a8f1bd7845ee8d25f
 if test -f Makefile.PL; then
 make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
@@ -91,6 +103,10 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 /usr/share/man/man3/Net::OpenSSH::SSH.3
 /usr/share/man/man3/Net::OpenSSH::ShellQuoter::MSCmd.3
 /usr/share/man/man3/Net::OpenSSH::ShellQuoter::MSWin.3
+
+%files license
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/perl-Net-OpenSSH/358e44dddf4d5eb61f97778a8f1bd7845ee8d25f
 
 %files perl
 %defattr(-,root,root,-)
