@@ -4,7 +4,7 @@
 #
 Name     : perl-Net-OpenSSH
 Version  : 0.78
-Release  : 12
+Release  : 13
 URL      : https://cpan.metacpan.org/authors/id/S/SA/SALVA/Net-OpenSSH-0.78.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/S/SA/SALVA/Net-OpenSSH-0.78.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libn/libnet-openssh-perl/libnet-openssh-perl_0.78-1.debian.tar.xz
@@ -110,17 +110,17 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.1/Net/OpenSSH.pm
-/usr/lib/perl5/vendor_perl/5.30.1/Net/OpenSSH/ConnectionCache.pm
-/usr/lib/perl5/vendor_perl/5.30.1/Net/OpenSSH/Constants.pm
-/usr/lib/perl5/vendor_perl/5.30.1/Net/OpenSSH/ModuleLoader.pm
-/usr/lib/perl5/vendor_perl/5.30.1/Net/OpenSSH/OSTracer.pm
-/usr/lib/perl5/vendor_perl/5.30.1/Net/OpenSSH/ObjectRemote.pm
-/usr/lib/perl5/vendor_perl/5.30.1/Net/OpenSSH/SSH.pm
-/usr/lib/perl5/vendor_perl/5.30.1/Net/OpenSSH/ShellQuoter.pm
-/usr/lib/perl5/vendor_perl/5.30.1/Net/OpenSSH/ShellQuoter/Chain.pm
-/usr/lib/perl5/vendor_perl/5.30.1/Net/OpenSSH/ShellQuoter/MSCmd.pm
-/usr/lib/perl5/vendor_perl/5.30.1/Net/OpenSSH/ShellQuoter/MSWin.pm
-/usr/lib/perl5/vendor_perl/5.30.1/Net/OpenSSH/ShellQuoter/POSIX.pm
-/usr/lib/perl5/vendor_perl/5.30.1/Net/OpenSSH/ShellQuoter/csh.pm
-/usr/lib/perl5/vendor_perl/5.30.1/Net/OpenSSH/ShellQuoter/fish.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Net/OpenSSH.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Net/OpenSSH/ConnectionCache.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Net/OpenSSH/Constants.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Net/OpenSSH/ModuleLoader.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Net/OpenSSH/OSTracer.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Net/OpenSSH/ObjectRemote.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Net/OpenSSH/SSH.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Net/OpenSSH/ShellQuoter.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Net/OpenSSH/ShellQuoter/Chain.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Net/OpenSSH/ShellQuoter/MSCmd.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Net/OpenSSH/ShellQuoter/MSWin.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Net/OpenSSH/ShellQuoter/POSIX.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Net/OpenSSH/ShellQuoter/csh.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Net/OpenSSH/ShellQuoter/fish.pm
