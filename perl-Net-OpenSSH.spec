@@ -4,11 +4,11 @@
 #
 Name     : perl-Net-OpenSSH
 Version  : 0.79
-Release  : 14
+Release  : 15
 URL      : https://cpan.metacpan.org/authors/id/S/SA/SALVA/Net-OpenSSH-0.79.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/S/SA/SALVA/Net-OpenSSH-0.79.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libn/libnet-openssh-perl/libnet-openssh-perl_0.78-1.debian.tar.xz
-Summary  : Perl SSH client package implemented on top of OpenSSH
+Summary  : 'Perl SSH client package implemented on top of OpenSSH'
 Group    : Development/Tools
 License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
 Requires: perl-Net-OpenSSH-license = %{version}-%{release}
@@ -26,7 +26,6 @@ INSTALLATION
 Summary: dev components for the perl-Net-OpenSSH package.
 Group: Development
 Provides: perl-Net-OpenSSH-devel = %{version}-%{release}
-Requires: perl-Net-OpenSSH = %{version}-%{release}
 Requires: perl-Net-OpenSSH = %{version}-%{release}
 
 %description dev
@@ -111,17 +110,17 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.2/Net/OpenSSH.pm
-/usr/lib/perl5/vendor_perl/5.30.2/Net/OpenSSH/ConnectionCache.pm
-/usr/lib/perl5/vendor_perl/5.30.2/Net/OpenSSH/Constants.pm
-/usr/lib/perl5/vendor_perl/5.30.2/Net/OpenSSH/ModuleLoader.pm
-/usr/lib/perl5/vendor_perl/5.30.2/Net/OpenSSH/OSTracer.pm
-/usr/lib/perl5/vendor_perl/5.30.2/Net/OpenSSH/ObjectRemote.pm
-/usr/lib/perl5/vendor_perl/5.30.2/Net/OpenSSH/SSH.pm
-/usr/lib/perl5/vendor_perl/5.30.2/Net/OpenSSH/ShellQuoter.pm
-/usr/lib/perl5/vendor_perl/5.30.2/Net/OpenSSH/ShellQuoter/Chain.pm
-/usr/lib/perl5/vendor_perl/5.30.2/Net/OpenSSH/ShellQuoter/MSCmd.pm
-/usr/lib/perl5/vendor_perl/5.30.2/Net/OpenSSH/ShellQuoter/MSWin.pm
-/usr/lib/perl5/vendor_perl/5.30.2/Net/OpenSSH/ShellQuoter/POSIX.pm
-/usr/lib/perl5/vendor_perl/5.30.2/Net/OpenSSH/ShellQuoter/csh.pm
-/usr/lib/perl5/vendor_perl/5.30.2/Net/OpenSSH/ShellQuoter/fish.pm
+/usr/lib/perl5/vendor_perl/5.30.3/Net/OpenSSH.pm
+/usr/lib/perl5/vendor_perl/5.30.3/Net/OpenSSH/ConnectionCache.pm
+/usr/lib/perl5/vendor_perl/5.30.3/Net/OpenSSH/Constants.pm
+/usr/lib/perl5/vendor_perl/5.30.3/Net/OpenSSH/ModuleLoader.pm
+/usr/lib/perl5/vendor_perl/5.30.3/Net/OpenSSH/OSTracer.pm
+/usr/lib/perl5/vendor_perl/5.30.3/Net/OpenSSH/ObjectRemote.pm
+/usr/lib/perl5/vendor_perl/5.30.3/Net/OpenSSH/SSH.pm
+/usr/lib/perl5/vendor_perl/5.30.3/Net/OpenSSH/ShellQuoter.pm
+/usr/lib/perl5/vendor_perl/5.30.3/Net/OpenSSH/ShellQuoter/Chain.pm
+/usr/lib/perl5/vendor_perl/5.30.3/Net/OpenSSH/ShellQuoter/MSCmd.pm
+/usr/lib/perl5/vendor_perl/5.30.3/Net/OpenSSH/ShellQuoter/MSWin.pm
+/usr/lib/perl5/vendor_perl/5.30.3/Net/OpenSSH/ShellQuoter/POSIX.pm
+/usr/lib/perl5/vendor_perl/5.30.3/Net/OpenSSH/ShellQuoter/csh.pm
+/usr/lib/perl5/vendor_perl/5.30.3/Net/OpenSSH/ShellQuoter/fish.pm
