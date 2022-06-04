@@ -4,7 +4,7 @@
 #
 Name     : perl-Net-OpenSSH
 Version  : 0.82
-Release  : 22
+Release  : 23
 URL      : https://cpan.metacpan.org/authors/id/S/SA/SALVA/Net-OpenSSH-0.82.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/S/SA/SALVA/Net-OpenSSH-0.82.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libn/libnet-openssh-perl/libnet-openssh-perl_0.78-1.debian.tar.xz
